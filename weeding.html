@@ -4,13 +4,95 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dream Lane Wedding Events</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+        }
+        header {
+            background-color: #fff;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        header h1 {
+            margin: 0;
+            color: #ff6347;
+        }
+        header p {
+            margin: 0;
+            font-size: 1.2em;
+        }
+        button {
+            background-color: #ff6347;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        section {
+            padding: 20px;
+            background-color: #fff;
+            margin: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #ff6347;
+        }
+        .service {
+            margin-bottom: 10px;
+        }
+        #contact form {
+            display: flex;
+            flex-direction: column;
+        }
+        #contact label {
+            margin-top: 10px;
+        }
+        #contact input, #contact textarea {
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 -4px 8px rgba(0,0,0,0.1);
+        }
+        .carousel-image {
+            display: none;
+            width: 100%;
+        }
+        .carousel-image:first-child {
+            display: block;
+        }
+        .carousel-button {
+            cursor: pointer;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .prev {
+            left: 10px;
+        }
+        .next {
+            right: 10px;
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>Dream Lane Wedding Events</h1>
         <p>Making your dream wedding come true</p>
-        <button>Get a Quote</button>
+        <button onclick="getQuote()">Get a Quote</button>
     </header>
     
     <section id="about">
@@ -76,8 +158,6 @@
         <form>
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
             <label for="message">Message:</label>
             <textarea id="message" name="message" required></textarea>
             <button type="submit">Submit</button>
@@ -88,6 +168,33 @@
         <p>&copy; 2025 Dream Lane Wedding Events</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        function getQuote() {
+            alert("Thank you for your interest! We will get back to you with a quote soon.");
+        }
+
+        let currentImageIndex = 0;
+        const images = document.querySelectorAll('.carousel-image');
+
+        function showImage(index) {
+            images.forEach((image, i) => {
+                image.style.display = i === index ? 'block' : 'none';
+            });
+        }
+
+        function prevImage() {
+            currentImageIndex = (currentImageIndex > 0) ? currentImageIndex - 1 : images.length - 1;
+            showImage(currentImageIndex);
+        }
+
+        function nextImage() {
+            currentImageIndex = (currentImageIndex < images.length - 1) ? currentImageIndex + 1 : 0;
+            showImage(currentImageIndex);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            showImage(currentImageIndex);
+        });
+    </script>
 </body>
 </html>
