@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="jUnmNexwAoZEM">
+    <title>Dream Lane Events</title>
+   
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #1a1a1a;
+            color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: linear-gradient(to right, #000, #333);
+            color: #fff;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+        }
+        nav ul li {
+            margin: 0;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #ffcc00;
+        }
+        main {
+            padding: 2rem;
+        }
+        section {
+            margin-bottom: 2rem;
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        .service, .highlight {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            background-color: #333;
+            padding: 1rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .service:hover, .highlight:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+        .service img, .highlight img {
+            width: 150px;
+            height: auto;
+            margin-right: 1rem;
+            border-radius: 50%;
+        }
+        .contact-button {
+            background-color: #ffcc00;
+            color: #000;
+            padding: 1rem 2rem;
+            border: none;
+            cursor: pointer;
+            display: block;
+            margin: 0 auto;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .contact-button:hover {
+            background-color: #e6b800;
+        }
+        footer {
+            background: #000;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3);
+        }
+        .center-text {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Dream Lane Event</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#who-we-are">Who We Are</a></li>
+               <a href="service.html">Our Services</a>
+                <li><a href="#event">upcoming events</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home" class="center-text">
+            <img src="first.jpg" alt="Home Image" style="width:100%; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);">
+            <h1>Welcome to Dream Lane Event</h1>
+            <p>Making your special moments unforgettable.</p>
+        </section>
+        <section id="who-we-are">
+            <h2>Who We Are</h2>
+            <p>Welcome to Dream Lane Event, where we specialize in creating unforgettable experiences. Our team of dedicated professionals is passionate about turning your vision into reality. From corporate events to intimate gatherings, we handle it all with precision and creativity.</p>
+            <p>Dream লেন ইভেন্টে আপনাকে স্বাগতম, যেখানে আমরা স্মরণীয় অভিজ্ঞতা তৈরি করতে বিশেষজ্ঞ। আমাদের নিবেদিত পেশাদারদের দল আপনার দৃষ্টিভঙ্গিকে বাস্তবতায় পরিণত করতে আগ্রহী। কর্পোরেট ইভেন্ট থেকে অন্তরঙ্গ সমাবেশ পর্যন্ত, আমরা সবকিছু নির্ভুলতা এবং সৃজনশীলতার সাথে পরিচালনা করি।</p>
+        </section>
+        <section id="services">
+            <h2>Our Services</h2>
+            <h3>আমাদের সেবাসমূহ</h3>
+            <div class="service">
+                <img src="conference.jpg" alt="Conference Icon">
+                <h3 style="text-align:center;">CONFERENCE</h3>
+                <p style="text-align:center;">Organize professional conferences with seamless execution.</p>
+            </div>
+            <div class="service">
+                <img src="exhibition.jpg" alt="Exhibitions Icon">
+                <h3 style="text-align:center;">EXHIBITIONS</h3>
+                <p style="text-align:center;">Manage engaging exhibitions that attract visitors.</p>
+            </div>
+            <div class="service">
+                <img src="product.jpg" alt="Product Launch Icon">
+                <h3 style="text-align:center;">PRODUCT LAUNCH</h3>
+                <p style="text-align:center;">Plan impressive product launches to make an impact.</p>
+            </div>
+            <div class="service">
+                <img src="annual.jpg" alt="Annual Meeting Icon">
+                <h3 style="text-align:center;">ANNUAL MEETING</h3>
+                <p style="text-align:center;">Coordinate successful annual meetings for your organization.</p>
+            </div>
+            <div class="service">
+                <img src="activation.jpg" alt="Brand Activation Icon">
+                <h3 style="text-align:center;">BRAND ACTIVATION</h3>
+                <p style="text-align:center;">Create engaging brand activation events to boost awareness.</p>
+            </div>
+            <div class="service">
+                <img src="virtual.jpg" alt="Virtual Conference Icon">
+                <h3 style="text-align:center;">VIRTUAL CONFERENCE</h3>
+                <p style="text-align:center;">Host seamless virtual conferences with cutting-edge technology.</p>
+            </div>
+            <div class="service">
+                <img src="artist.jpg" alt="Artist Management Icon">
+                <h3 style="text-align:center;">ARTIST MANAGEMENT</h3>
+                <p style="text-align:center;">Manage artists and performances for various events.</p>
+            </div>
+            <div class="service">
+                <img src="concert.jpg" alt="Concert Icon">
+                <h3 style="text-align:center;">CONCERT</h3>
+                <p style="text-align:center;">Organize and manage concerts to ensure a memorable experience.</p>
+            </div>
+            <div class="service">
+                <img src="fashion.jpg" alt="Fashion Show Icon">
+                <h3 style="text-align:center;">FASHION SHOW</h3>
+                <p style="text-align:center;">Plan and execute stylish fashion shows with flair.</p>
+            </div>
+            <div class="service">
+                <img src="road.jpg" alt="Road Show Icon">
+                <h3 style="text-align:center;">ROAD SHOW</h3>
+                <p style="text-align:center;">Conduct impactful road shows to reach a wider audience.</p>
+            </div>
+            <div class="service">
+			 
+                <img src="wedding.jpg" alt="Wedding Event Icon">
+                <h3 style="text-align:center;">WEDDING EVENT</h3>
+                <p style="text-align:center;">Create enchanting wedding events for a lifetime of memories.</p>
+            </div>
+            <div class="service">
+                <img src="birthday.jpg" alt="Birthday Event Icon">
+                <h3 style="text-align:center;">BIRTHDAY EVENT</h3>
+                <p style="text-align:center;">Celebrate birthday events with fun and excitement.</p>
+            </div>
+        </section>
+                <section id="events">
+            <h2>Upcoming Events</h2>
+            <p>Information on future events.</p>
+        </section>
+        <section id="why-choose-us">
+            <h2>Why Choose Us For Your Event?</h2>
+            <div class="highlight">
+                <img src="fourth.jpg" alt="Logistics Support">
+                <h3>ALL KINDS OF LOGISTICS AND RESOURCES SUPPORT</h3>
+                <p>As an experienced Event Management company, we have all kinds of event equipment, logistics, and resources available.</p>
+                <p>একজন অভিজ্ঞ ইভেন্ট ম্যানেজমেন্ট কোম্পানি হিসেবে, আমাদের কাছে সমস্ত ধরণের ইভেন্ট সরঞ্জাম, লজিস্টিকস এবং সম্পদ উপলব্ধ।</p>
+            </div>
+            <div class="highlight">
+                <img src="third.jpg" alt="Experienced Team">
+                <h3>EXPERIENCED EVENT PLANNER AND MANAGER</h3>
+                <p>When it's about making your event successful, it's all about planning, managing, and executing successfully. We have experienced professionals who will make your event unique and memorable!</p>
+                <p>আপনার ইভেন্ট সফল করার জন্য, পরিকল্পনা, পরিচালনা এবং সফলভাবে কার্যকর করার বিষয়টি গুরুত্বপূর্ণ। আমাদের অভিজ্ঞ পেশাদাররা আপনার ইভেন্টকে অনন্য এবং স্মরণীয় করে তুলবেন!</p>
+            </div>
+            <button class="contact-button">Contact Us!</button>
+       <section id="services">
+    <h2>ABOUT US!</h2>
+    <div class="service">
+        <img src="juwel.jpg" alt="Emdadul HAQUE (JUWEL)" class="circular-image">
+        <h3 style="text-align:center;">Emdadul HAQUE (JUWEL)</h3>
+        <p style="text-align:center;">Studied at Computer Science and Engineering</p>
+        <p style="text-align:center;">Phone: 017944165</p>
+        <p style="text-align:center;">Gmail: emdaduljuwelj@gmail.com</p>
+    </div>
+    
+</section>
+
+
+
+    </main>
+    <footer>
+        <p>&copy; 2025 Dream Lane Event. All rights reserved.</p>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const navLinks = document.querySelectorAll("nav ul li a");
+
+            navLinks.forEach(link => {
+                link.addEventListener("click", (event) => {
+                    event.preventDefault();
+                    const targetId = event.target.getAttribute("href").substring(1);
+                    const targetSection = document.getElementById(targetId);
+
+                    targetSection.scrollIntoView({
+                        behavior: "smooth"
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
