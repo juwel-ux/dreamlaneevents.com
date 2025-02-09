@@ -81,6 +81,12 @@
             right: 10px;
         }
     </style>
+    <script>
+        function toggleService(serviceId) {
+            const service = document.getElementById(serviceId);
+            service.style.display = service.style.display === 'none' ? 'block' : 'none';
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -97,53 +103,61 @@
     <section id="services">
         <h2>Our Services</h2>
         <div class="service">
-            <h3>Planning & Coordination</h3>
-            <div class="service">
-                <h4>Muslim Wedding</h4>
-                <div class="service">
-                    <h5>Mehedi Ceremony</h5>
-                    <p>Details about the Mehedi Ceremony for Muslim weddings.</p>
+            <h3 onclick="toggleService('planningCoordination')">Planning & Coordination</h3>
+            <div id="planningCoordination" style="display:none;">
+                <div class="service" onclick="toggleService('muslimWedding')">
+                    <h4>Muslim Wedding</h4>
+                    <div id="muslimWedding" style="display:none;">
+                        <div class="service">
+                            <h5>Mehedi Ceremony</h5>
+                            <p>Details about the Mehedi Ceremony for Muslim weddings.</p>
+                        </div>
+                        <div class="service">
+                            <h5>Holud Sondha</h5>
+                            <p>Details about the Holud Sondha for Muslim weddings.</p>
+                        </div>
+                        <div class="service">
+                            <h5>Wedding</h5>
+                            <p>Details about the wedding ceremony for Muslim weddings.</p>
+                            <!-- Photo catalog for Muslim Wedding -->
+                        </div>
+                    </div>
                 </div>
-                <div class="service">
-                    <h5>Holud Sondha</h5>
-                    <p>Details about the Holud Sondha for Muslim weddings.</p>
+                <div class="service" onclick="toggleService('hinduWedding')">
+                    <h4>Hindu Wedding</h4>
+                    <div id="hinduWedding" style="display:none;">
+                        <div class="service">
+                            <h5>Mehedi Ceremony</h5>
+                            <p>Details about the Mehedi Ceremony for Hindu weddings.</p>
+                        </div>
+                        <div class="service">
+                            <h5>Holud Sondha</h5>
+                            <p>Details about the Holud Sondha for Hindu weddings.</p>
+                        </div>
+                        <div class="service">
+                            <h5>Wedding</h5>
+                            <p>Details about the wedding ceremony for Hindu weddings.</p>
+                            <!-- Photo catalog for Hindu Wedding -->
+                        </div>
+                    </div>
                 </div>
-                <div class="service">
-                    <h5>Wedding</h5>
-                    <p>Details about the wedding ceremony for Muslim weddings.</p>
-                    <!-- Photo catalog for Muslim Wedding -->
-                </div>
-            </div>
-            <div class="service">
-                <h4>Hindu Wedding</h4>
-                <div class="service">
-                    <h5>Mehedi Ceremony</h5>
-                    <p>Details about the Mehedi Ceremony for Hindu weddings.</p>
-                </div>
-                <div class="service">
-                    <h5>Holud Sondha</h5>
-                    <p>Details about the Holud Sondha for Hindu weddings.</p>
-                </div>
-                <div class="service">
-                    <h5>Wedding</h5>
-                    <p>Details about the wedding ceremony for Hindu weddings.</p>
-                    <!-- Photo catalog for Hindu Wedding -->
-                </div>
-            </div>
-            <div class="service">
-                <h4>Christian Wedding</h4>
-                <div class="service">
-                    <h5>Mehedi Ceremony</h5>
-                    <p>Details about the Mehedi Ceremony for Christian weddings.</p>
-                </div>
-                <div class="service">
-                    <h5>Holud Sondha</h5>
-                    <p>Details about the Holud Sondha for Christian weddings.</p>
-                </div>
-                <div class="service">
-                    <h5>Wedding</h5>
-                    <p>Details about the wedding ceremony for Christian weddings.</p>
-                    <!-- Photo catalog for Christian Wedding -->
+                <div class="service" onclick="toggleService('christianWedding')">
+                    <h4>Christian Wedding</h4>
+                    <div id="christianWedding" style="display:none;">
+                        <div class="service">
+                            <h5>Mehedi Ceremony</h5>
+                            <p>Details about the Mehedi Ceremony for Christian weddings.</p>
+                        </div>
+                        <div class="service">
+                            <h5>Holud Sondha</h5>
+                            <p>Details about the Holud Sondha for Christian weddings.</p>
+                        </div>
+                        <div class="service">
+                            <h5>Wedding</h5>
+                            <p>Details about the wedding ceremony for Christian weddings.</p>
+                            <!-- Photo catalog for Christian Wedding -->
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -166,9 +180,9 @@
         <div class="service">
             <img src="imran.jpg" alt="MD Imran Hossain" class="circular-image">
             <h3 style="text-align:center;">MD Imran Hossain</h3>
-            <p style="text-align:center;">Studied at Nargis Memorial Nursing College,Bagerhat</p>
+            <p style="text-align:center;">Studied at Nargis Memorial Nursing College, Bagerhat</p>
             <p style="text-align:center;">Phone: 01301459229</p>
-            <p style="text-align:center;">Gmail:ihimranhossain2003@gmail.com</p>
+            <p style="text-align:center;">Gmail: ihimranhossain2003@gmail.com</p>
         </div>
     </section>
     
