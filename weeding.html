@@ -206,11 +206,59 @@
     <button onclick="toggleCeremony('wedding-muslim')">Wedding Arrangement</button>
 </section>
 
+<section id="wedding-muslim" class="ceremony" style="display: none;">
+    <h4>Wedding Arrangement</h4>
+    <button onclick="toggleSubCeremony('muslim-wedding-decor')">Muslim Wedding Decor</button>
+    <button onclick="toggleSubCeremony('stage-decor-muslim')">Stage Decor</button>
+</section>
+
+<section id="muslim-wedding-decor" class="sub-ceremony" style="display: none;">
+    <h4>Muslim Wedding Decor</h4>
+    <div class="image-gallery">
+        <img src="wedding-decor1.jpg" alt="Wedding Decor Image 1">
+        <img src="wedding-decor2.jpg" alt="Wedding Decor Image 2">
+    </div>
+    <p>Price: $1500 - $3000</p>
+</section>
+
+<section id="stage-decor-muslim" class="sub-ceremony" style="display: none;">
+    <h4>Stage Decor</h4>
+    <div class="image-gallery">
+        <img src="stage-decor1.jpg" alt="Stage Decor Image 1">
+        <img src="stage-decor2.jpg" alt="Stage Decor Image 2">
+    </div>
+    <p>Price: $1000 - $2500</p>
+</section>
+
 <section id="hindu-wedding" class="wedding-types" style="display: none;">
     <h3>Hindu Wedding</h3>
     <button onclick="toggleCeremony('mehndi-muslim')">Mehndi Ceremony</button>
     <button onclick="toggleCeremony('holud-muslim')">Holud Shonda</button>
-    <button onclick="toggleCeremony('wedding-muslim')">Wedding Arrangement</button>
+    <button onclick="toggleCeremony('wedding-hindu')">Wedding Arrangement</button>
+</section>
+
+<section id="wedding-hindu" class="ceremony" style="display: none;">
+    <h4>Wedding Arrangement</h4>
+    <button onclick="toggleSubCeremony('mandap-decor')">Mandap Decor</button>
+    <button onclick="toggleSubCeremony('stage-decor-hindu')">Stage Decor</button>
+</section>
+
+<section id="mandap-decor" class="sub-ceremony" style="display: none;">
+    <h4>Mandap Decor</h4>
+    <div class="image-gallery">
+        <img src="mandap-decor1.jpg" alt="Mandap Decor Image 1">
+        <img src="mandap-decor2.jpg" alt="Mandap Decor Image 2">
+    </div>
+    <p>Price: $1200 - $2800</p>
+</section>
+
+<section id="stage-decor-hindu" class="sub-ceremony" style="display: none;">
+    <h4>Stage Decor</h4>
+    <div class="image-gallery">
+        <img src="stage-decor1.jpg" alt="Stage Decor Image 1">
+        <img src="stage-decor2.jpg" alt="Stage Decor Image 2">
+    </div>
+    <p>Price: $1000 - $2500</p>
 </section>
 
 <section id="christian-wedding" class="wedding-types" style="display: none;">
@@ -218,6 +266,15 @@
     <button onclick="toggleCeremony('mehndi-muslim')">Mehndi Ceremony</button>
     <button onclick="toggleCeremony('holud-muslim')">Holud Shonda</button>
     <button onclick="toggleCeremony('wedding-muslim')">Wedding Arrangement</button>
+</section>
+
+<section id="gate-decor" class="sub-ceremony" style="display: none;">
+    <h4>Gate Decor</h4>
+    <div class="image-gallery">
+        <img src="gate-decor1.jpg" alt="Gate Decor Image 1">
+        <img src="gate-decor2.jpg" alt="Gate Decor Image 2">
+    </div>
+    <p>Price: $800 - $2000</p>
 </section>
 
 <section id="mehndi-muslim" class="ceremony" style="display: none;">
@@ -238,15 +295,6 @@
     <p>Price: $700 - $2000</p>
 </section>
 
-<section id="wedding-muslim" class="ceremony" style="display: none;">
-    <h4>Wedding Arrangement</h4>
-    <div class="image-gallery">
-        <img src="wedding1.jpg" alt="Wedding Image 1">
-        <img src="wedding2.jpg" alt="Wedding Image 2">
-    </div>
-    <p>Price: 000 - 000</p>
-</section>
-
 <script>
 function toggleWeddingType(type) {
     var weddingTypes = document.querySelectorAll('.wedding-types');
@@ -263,8 +311,15 @@ function toggleCeremony(ceremony) {
     });
     document.getElementById(ceremony).style.display = 'block';
 }
-</script>
 
+function toggleSubCeremony(subCeremony) {
+    var subCeremonies = document.querySelectorAll('.sub-ceremony');
+    subCeremonies.forEach(function(section) {
+        section.style.display = 'none';
+    });
+    document.getElementById(subCeremony).style.display = 'block';
+}
+</script>
 
     <!-- Catering Service -->
     <div class="service">
