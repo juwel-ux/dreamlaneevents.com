@@ -11,54 +11,64 @@
       background-color: #f4f4f4;
       color: #333;
       margin: 0;
+      padding: 0;
     }
 
     header {
       background-color: #fff;
-      padding: 20px;
+      padding: 30px;
       text-align: center;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
     header h1 {
       margin: 0;
-      color: #ff6347;
+      color: #2a7f62; /* Soft Green */
     }
 
     header p {
-      margin: 0;
+      margin: 10px 0;
       font-size: 1.2em;
     }
 
     button {
-      background-color: #ff6347;
+      background-color: #2a7f62;
       color: #fff;
       border: none;
-      padding: 10px 20px;
+      padding: 12px 24px;
       cursor: pointer;
+      border-radius: 5px;
+      font-size: 1em;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #1e5c44;
     }
 
     section {
-      padding: 20px;
+      padding: 40px 20px;
       background-color: #fff;
       margin: 20px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
 
     h2, h3, h4, h5 {
-      color: #ff6347;
+      color: #2a7f62;
     }
 
     .service {
-      margin-bottom: 10px;
+      margin-bottom: 20px;
     }
 
     .circular-image {
-      width: 100px;
-      height: 100px;
+      width: 120px;
+      height: 120px;
       border-radius: 50%;
       display: block;
       margin: 0 auto;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
     footer {
@@ -66,6 +76,29 @@
       padding: 20px;
       background-color: #fff;
       box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+      margin-top: 40px;
+    }
+
+    .icon {
+      font-size: 1.5em;
+      margin-right: 10px;
+    }
+
+    .wedding-details {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .wedding-details img {
+      width: 30%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .wedding-details p {
+      width: 100%;
     }
 
     .carousel-image {
@@ -94,28 +127,6 @@
 
     .next {
       right: 10px;
-    }
-
-    .icon {
-      font-size: 1.5em;
-      margin-right: 10px;
-    }
-
-    .wedding-details {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-
-    .wedding-details img {
-      width: 30%;
-      height: auto;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .wedding-details p {
-      width: 100%;
     }
   </style>
   <script>
@@ -155,110 +166,96 @@
 
   <section id="services">
     <h2>Our Services</h2>
-    
-    <!-- Wedding Services with Icons -->
-    <div class="service">
-      <h3 onclick="toggleService('planningCoordination')"><i class="fas fa-calendar-check icon"></i> Planning & Coordination</h3>
-      <div id="planningCoordination" style="display:none;">
-        <div class="service" onclick="toggleService('muslimWedding')">
-          <h4>Muslim Wedding</h4>
-          <div id="muslimWedding" style="display:none;">
-            <div class="wedding-details">
-              <img src="mehedi.jpg" alt="Mehedi Ceremony">
-              <img src="holud-sondha.jpg" alt="Holud Sondha">
-              <img src="wedding.jpg" alt="Wedding Ceremony">
-            </div>
-            <div class="service">
-              <h5>Mehedi Ceremony</h5>
-              <p>Details about the Mehedi Ceremony for Muslim weddings.</p>
-            </div>
-            <div class="service">
-              <h5>Holud Sondha</h5>
-              <p>Details about the Holud Sondha for Muslim weddings.</p>
-            </div>
-            <div class="service">
-              <h5>Wedding</h5>
-              <p>Details about the wedding ceremony for Muslim weddings.</p>
-            </div>
-          </div>
-        </div>
 
-        <!-- Hindu Wedding Example -->
-        <div class="service" onclick="toggleService('hinduWedding')">
-          <h4>Hindu Wedding</h4>
-          <div id="hinduWedding" style="display:none;">
-            <div class="wedding-details">
-              <img src="hindu-mehedi.jpg" alt="Hindu Mehedi">
-              <img src="hindu-holud.jpg" alt="Hindu Holud">
-              <img src="hindu-wedding.jpg" alt="Hindu Wedding">
-            </div>
-            <div class="service">
-              <h5>Mehedi Ceremony</h5>
-              <p>Details about the Mehedi Ceremony for Hindu weddings.</p>
-            </div>
-            <div class="service">
-              <h5>Holud Sondha</h5>
-              <p>Details about the Holud Sondha for Hindu weddings.</p>
-            </div>
-            <div class="service">
-              <h5>Wedding</h5>
-              <p>Details about the wedding ceremony for Hindu weddings.</p>
-            </div>
-          </div>
+    <!-- Muslim Wedding -->
+    <div class="service">
+      <h3 onclick="toggleService('muslimWedding')"><i class="fas fa-mosque icon"></i> Muslim Wedding</h3>
+      <div id="muslimWedding" style="display:none;">
+        <h4>Mehendi Ceremony</h4>
+        <div class="wedding-details">
+          <img src="muslim-mehendi1.jpg" alt="Muslim Mehendi 1">
+          <img src="muslim-mehendi2.jpg" alt="Muslim Mehendi 2">
+          <img src="muslim-mehendi3.jpg" alt="Muslim Mehendi 3">
         </div>
+        <p>Details about the Mehendi Ceremony for Muslim weddings.</p>
+
+        <h4>Holud Sondha</h4>
+        <div class="wedding-details">
+          <img src="muslim-holud1.jpg" alt="Muslim Holud 1">
+          <img src="muslim-holud2.jpg" alt="Muslim Holud 2">
+          <img src="muslim-holud3.jpg" alt="Muslim Holud 3">
+        </div>
+        <p>Details about the Holud Sondha for Muslim weddings.</p>
+
+        <h4>Wedding</h4>
+        <div class="wedding-details">
+          <img src="muslim-wedding1.jpg" alt="Muslim Wedding 1">
+          <img src="muslim-wedding2.jpg" alt="Muslim Wedding 2">
+          <img src="muslim-wedding3.jpg" alt="Muslim Wedding 3">
+        </div>
+        <p>Details about the wedding ceremony for Muslim weddings.</p>
       </div>
     </div>
 
-    <!-- Other Services -->
+    <!-- Hindu Wedding -->
     <div class="service">
-      <h3><i class="fas fa-utensils icon"></i> Catering</h3>
-      <p>Information on catering options, including menus and special dietary accommodations.</p>
-    </div>
-    <div class="service">
-      <h3><i class="fas fa-camera icon"></i> Photography & Videography</h3>
-      <p>Packages available, portfolio samples, and photographer bios.</p>
-    </div>
-    <div class="service">
-      <h3><i class="fas fa-paint-brush icon"></i> Decor & Design</h3>
-      <p>Examples of decor themes and options.</p>
-    </div>
-    <div class="service">
-      <h3><i class="fas fa-building icon"></i> Venue Options</h3>
-      <p>List of partnered venues or venue setup services.</p>
-    </div>
-    <div class="service">
-      <img src="imran.jpg" alt="MD Imran Hossain" class="circular-image">
-      <h3>MD Imran Hossain</h3>
-      <p>Studied at Nargis Memorial Nursing College, Bagerhat</p>
-      <p>Phone: 01301459229</p>
-      <p>Gmail: ihimranhossain2003@gmail.com</p>
-    </div>
-  </section>
+      <h3 onclick="toggleService('hinduWedding')"><i class="fas fa-gopuram icon"></i> Hindu Wedding</h3>
+      <div id="hinduWedding" style="display:none;">
+        <h4>Mehendi Ceremony</h4>
+        <div class="wedding-details">
+          <img src="hindu-mehendi1.jpg" alt="Hindu Mehendi 1">
+          <img src="hindu-mehendi2.jpg" alt="Hindu Mehendi 2">
+          <img src="hindu-mehendi3.jpg" alt="Hindu Mehendi 3">
+        </div>
+        <p>Details about the Mehendi Ceremony for Hindu weddings.</p>
 
-  <section id="testimonials">
-    <h2>Testimonials</h2>
-    <p>Hear from our happy couples!</p>
-  </section>
+        <h4>Holud Sondha</h4>
+        <div class="wedding-details">
+          <img src="hindu-holud1.jpg" alt="Hindu Holud 1">
+          <img src="hindu-holud2.jpg" alt="Hindu Holud 2">
+          <img src="hindu-holud3.jpg" alt="Hindu Holud 3">
+        </div>
+        <p>Details about the Holud Sondha for Hindu weddings.</p>
 
-  <section id="gallery">
-    <h2>Gallery</h2>
-    <div id="image-carousel" class="carousel">
-      <img src="image1.jpg" alt="Wedding Photo 1" class="carousel-image">
-      <img src="image2.jpg" alt="Wedding Photo 2" class="carousel-image">
-      <img src="image3.jpg" alt="Wedding Photo 3" class="carousel-image">
-      <button class="carousel-button prev" onclick="prevImage()">&#10094;</button>
-      <button class="carousel-button next" onclick="nextImage()">&#10095;</button>
+        <h4>Wedding</h4>
+        <div class="wedding-details">
+          <img src="hindu-wedding1.jpg" alt="Hindu Wedding 1">
+          <img src="hindu-wedding2.jpg" alt="Hindu Wedding 2">
+          <img src="hindu-wedding3.jpg" alt="Hindu Wedding 3">
+        </div>
+        <p>Details about the wedding ceremony for Hindu weddings.</p>
+      </div>
     </div>
-  </section>
 
-  <section id="pricing">
-    <h2>Pricing Packages</h2>
-    <p>Explore our transparent pricing packages.</p>
-  </section>
+    <!-- Christian Wedding -->
+    <div class="service">
+      <h3 onclick="toggleService('christianWedding')"><i class="fas fa-cross icon"></i> Christian Wedding</h3>
+      <div id="christianWedding" style="display:none;">
+        <h4>Mehendi Ceremony</h4>
+        <div class="wedding-details">
+          <img src="christian-mehendi1.jpg" alt="Christian Mehendi 1">
+          <img src="christian-mehendi2.jpg" alt="Christian Mehendi 2">
+          <img src="christian-mehendi3.jpg" alt="Christian Mehendi 3">
+        </div>
+        <p>Details about the Mehendi Ceremony for Christian weddings.</p>
 
-  <section id="blog">
-    <h2>Blog/Resources</h2>
-    <p>Helpful articles and tips for planning a wedding.</p>
+        <h4>Holud Sondha</h4>
+        <div class="wedding-details">
+          <img src="christian-holud1.jpg" alt="Christian Holud 1">
+          <img src="christian-holud2.jpg" alt="Christian Holud 2">
+          <img src="christian-holud3.jpg" alt="Christian Holud 3">
+        </div>
+        <p>Details about the Holud Sondha for Christian weddings.</p>
+
+        <h4>Wedding</h4>
+        <div class="wedding-details">
+          <img src="christian-wedding1.jpg" alt="Christian Wedding 1">
+          <img src="christian-wedding2.jpg" alt="Christian Wedding 2">
+          <img src="christian-wedding3.jpg" alt="Christian Wedding 3">
+        </div>
+        <p>Details about the wedding ceremony for Christian weddings.</p>
+      </div>
+    </div>
   </section>
 
   <footer>
