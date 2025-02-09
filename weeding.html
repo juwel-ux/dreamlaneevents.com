@@ -1,3 +1,5 @@
+
+You said:
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -191,6 +193,46 @@
 
   <section id="services">
     <h2>Our Services</h2>
+<section id="wedding-planning">
+    <h2>Wedding Planning Services</h2>
+    <button onclick="toggleWeddingType('muslim-wedding')">Muslim Wedding</button>
+    <button onclick="toggleWeddingType('hindu-wedding')">Hindu Wedding</button>
+    <button onclick="toggleWeddingType('christian-wedding')">Christian Wedding</button>
+  </section>
+
+  <section id="muslim-wedding" class="wedding-types">
+    <h3>Muslim Wedding</h3>
+    <button onclick="toggleCeremony('mehndi-muslim')">Mehndi Ceremony</button>
+    <button onclick="toggleCeremony('holud-muslim')">Holud Shonda</button>
+    <button onclick="toggleCeremony('wedding-muslim')">Wedding Arrangement</button>
+  </section>
+
+  <section id="mehndi-muslim" class="ceremony">
+    <h4>Mehndi Ceremony</h4>
+    <div class="image-gallery">
+      <img src="mehndi1.jpg" alt="Mehndi Image 1">
+      <img src="mehndi2.jpg" alt="Mehndi Image 2">
+    </div>
+    <p>Price: $500 - $1500</p>
+  </section>
+
+  <section id="holud-muslim" class="ceremony">
+    <h4>Holud Shonda</h4>
+    <div class="image-gallery">
+      <img src="holud1.jpg" alt="Holud Image 1">
+      <img src="holud2.jpg" alt="Holud Image 2">
+    </div>
+    <p>Price: $700 - $2000</p>
+  </section>
+
+  <section id="wedding-muslim" class="ceremony">
+    <h4>Wedding Arrangement</h4>
+    <div class="image-gallery">
+      <img src="wedding1.jpg" alt="Wedding Image 1">
+      <img src="wedding2.jpg" alt="Wedding Image 2">
+    </div>
+    <p>Price: $2000 - $5000</p>
+  </section>
 
     <!-- Catering Service -->
     <div class="service">
@@ -267,18 +309,18 @@
     <h2>Our Pricing Packages</h2>
     <div class="package">
       <h3>Basic Wedding Package</h3>
-      <p>Includes ceremony planning, basic decor, and venue options,photo and vediography.</p>
-      <p class="price">00000</p>
+      <p>Includes ceremony planning, basic decor, and venue options.</p>
+      <p class="price">$3,000</p>
     </div>
     <div class="package">
       <h3>Premium Wedding Package</h3>
       <p>Includes everything from the Basic Package plus catering and photography.</p>
-      <p class="price">0000</p>
+      <p class="price">$5,000</p>
     </div>
     <div class="package">
       <h3>Deluxe Wedding Package</h3>
       <p>Includes everything from the Premium Package plus premium decor, videography, and special invitation designs.</p>
-      <p class="price">0000</p>
+      <p class="price">$7,500</p>
     </div>
   </section>
 
