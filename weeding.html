@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,22 +32,6 @@
       font-size: 1.2em;
     }
 
-    button {
-      background-color: #fff;
-      color: #2a7f62;
-      border: none;
-      padding: 12px 24px;
-      cursor: pointer;
-      border-radius: 5px;
-      font-size: 1em;
-      transition: background-color 0.3s;
-    }
-
-    button:hover {
-      background-color: #1e5c44;
-      color: #fff;
-    }
-
     section {
       padding: 50px 20px;
       background-color: #111;
@@ -55,41 +40,12 @@
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     }
 
-    h2, h3, h4, h5 {
-      color: #2a7f62;
-    }
-
-    .service {
-      margin-bottom: 30px;
-    }
-
-    .circular-image {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      display: block;
-      margin: 0 auto;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #2a7f62;
-      box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
-      margin-top: 40px;
-    }
-
-    .icon {
-      font-size: 1.5em;
-      margin-right: 10px;
-    }
-
     .service-details {
       display: flex;
       flex-wrap: wrap;
       gap: 20px;
       justify-content: center;
+      text-align: center;
     }
 
     .service-details img {
@@ -99,59 +55,11 @@
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
-    .service-details p {
-      width: 100%;
-      text-align: center;
-    }
-
-    .package {
-      background-color: #333;
-      padding: 20px;
-      margin: 20px;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    }
-
-    .package h3 {
-      color: #fff;
-    }
-
-    .package p {
-      color: #bbb;
-      font-size: 1.2em;
-    }
-
-    .package .price {
+    .price-tag {
       color: #ff6347;
-      font-size: 1.5em;
-    }
-
-    .carousel-image {
-      display: none;
-      width: 100%;
-    }
-
-    .carousel-image:first-child {
-      display: block;
-    }
-
-    .carousel-button {
-      cursor: pointer;
-      background-color: rgba(0, 0, 0, 0.5);
-      color: white;
-      border: none;
-      padding: 10px;
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-    }
-
-    .prev {
-      left: 10px;
-    }
-
-    .next {
-      right: 10px;
+      font-size: 1.2em;
+      font-weight: bold;
+      margin-top: 5px;
     }
   </style>
   <script>
@@ -159,131 +67,60 @@
       const service = document.getElementById(serviceId);
       service.style.display = service.style.display === 'none' ? 'block' : 'none';
     }
-
-    function prevImage() {
-      const images = document.querySelectorAll('.carousel-image');
-      const current = Array.from(images).findIndex(img => img.style.display === 'block');
-      images[current].style.display = 'none';
-      const prev = (current - 1 + images.length) % images.length;
-      images[prev].style.display = 'block';
-    }
-
-    function nextImage() {
-      const images = document.querySelectorAll('.carousel-image');
-      const current = Array.from(images).findIndex(img => img.style.display === 'block');
-      images[current].style.display = 'none';
-      const next = (current + 1) % images.length;
-      images[next].style.display = 'block';
-    }
   </script>
 </head>
 <body>
   <header>
     <h1>Dream Lane Wedding Events</h1>
     <p>Making your dream wedding come true</p>
-    <button onclick="getQuote()">Get a Quote</button>
   </header>
-
-  <section id="about">
-    <h2>About Us</h2>
-    <p>Welcome to Dream Lane! We provide exceptional wedding event planning services to make your special day unforgettable.</p>
-  </section>
 
   <section id="services">
     <h2>Our Services</h2>
 
-    <!-- Catering Service -->
     <div class="service">
       <h3 onclick="toggleService('catering')"><i class="fas fa-utensils icon"></i> Catering</h3>
       <div id="catering" style="display:none;">
-        <h4>Menu Options</h4>
         <div class="service-details">
-          <img src="catering1.jpg" alt="Catering 1">
-          <img src="catering2.jpg" alt="Catering 2">
-          <img src="catering3.jpg" alt="Catering 3">
+          <div>
+            <img src="catering1.jpg" alt="Catering 1">
+            <p class="price-tag">$500</p>
+          </div>
+          <div>
+            <img src="catering2.jpg" alt="Catering 2">
+            <p class="price-tag">$800</p>
+          </div>
+          <div>
+            <img src="catering3.jpg" alt="Catering 3">
+            <p class="price-tag">$1,200</p>
+          </div>
         </div>
-        <p>Choose from a variety of menus, including special dietary options.</p>
       </div>
     </div>
 
-    <!-- Invitation Cards -->
     <div class="service">
       <h3 onclick="toggleService('invitation')"><i class="fas fa-envelope icon"></i> Invitation Cards</h3>
       <div id="invitation" style="display:none;">
-        <h4>Designs and Themes</h4>
         <div class="service-details">
-          <img src="invitation1.jpg" alt="Invitation 1">
-          <img src="invitation2.jpg" alt="Invitation 2">
-          <img src="invitation3.jpg" alt="Invitation 3">
+          <div>
+            <img src="invitation1.jpg" alt="Invitation 1">
+            <p class="price-tag">$100</p>
+          </div>
+          <div>
+            <img src="invitation2.jpg" alt="Invitation 2">
+            <p class="price-tag">$150</p>
+          </div>
+          <div>
+            <img src="invitation3.jpg" alt="Invitation 3">
+            <p class="price-tag">$200</p>
+          </div>
         </div>
-        <p>Browse through various designs and themes for your wedding invitations.</p>
       </div>
-    </div>
-
-    <!-- Photography & Videography -->
-    <div class="service">
-      <h3 onclick="toggleService('photography')"><i class="fas fa-camera icon"></i> Photography & Videography</h3>
-      <div id="photography" style="display:none;">
-        <h4>Portfolio</h4>
-        <div class="service-details">
-          <img src="photography1.jpg" alt="Photography 1">
-          <img src="photography2.jpg" alt="Photography 2">
-          <img src="photography3.jpg" alt="Photography 3">
-        </div>
-        <p>Explore our photography and videography portfolios for your wedding day.</p>
-      </div>
-    </div>
-
-    <!-- Venue -->
-    <div class="service">
-      <h3 onclick="toggleService('venue')"><i class="fas fa-building icon"></i> Venue</h3>
-      <div id="venue" style="display:none;">
-        <h4>Venue Options</h4>
-        <div class="service-details">
-          <img src="venue1.jpg" alt="Venue 1">
-          <img src="venue2.jpg" alt="Venue 2">
-          <img src="venue3.jpg" alt="Venue 3">
-        </div>
-        <p>Explore our partnered venues with stunning locations for your ceremony.</p>
-      </div>
-    </div>
-
-    <!-- Decor & Design -->
-    <div class="service">
-      <h3 onclick="toggleService('decor')"><i class="fas fa-cogs icon"></i> Decor & Design</h3>
-      <div id="decor" style="display:none;">
-        <h4>Decor Themes</h4>
-        <div class="service-details">
-          <img src="decor1.jpg" alt="Decor 1">
-          <img src="decor2.jpg" alt="Decor 2">
-          <img src="decor3.jpg" alt="Decor 3">
-        </div>
-        <p>Browse through different decor themes and design ideas for your wedding day.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="pricing">
-    <h2>Our Pricing Packages</h2>
-    <div class="package">
-      <h3>Basic Wedding Package</h3>
-      <p>Includes ceremony planning, basic decor, and venue options.</p>
-      <p class="price">$3,000</p>
-    </div>
-    <div class="package">
-      <h3>Premium Wedding Package</h3>
-      <p>Includes everything from the Basic Package plus catering and photography.</p>
-      <p class="price">$5,000</p>
-    </div>
-    <div class="package">
-      <h3>Deluxe Wedding Package</h3>
-      <p>Includes everything from the Premium Package plus premium decor, videography, and special invitation designs.</p>
-      <p class="price">$7,500</p>
     </div>
   </section>
 
   <footer>
-    <p>&copy; 2025 Dream Lane Wedding Events</p>
+    <p>&copy; Dream Lane Wedding Events</p>
   </footer>
 </body>
 </html>
