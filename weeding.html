@@ -1,222 +1,269 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dream Lane Wedding Events</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-            margin: 0;
-        }
-        header {
-            background-color: #fff;
-            padding: 20px;
-            text-align: center;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-        header h1 {
-            margin: 0;
-            color: #ff6347;
-        }
-        header p {
-            margin: 0;
-            font-size: 1.2em;
-        }
-        button {
-            background-color: #ff6347;
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            cursor: pointer;
-        }
-        section {
-            padding: 20px;
-            background-color: #fff;
-            margin: 20px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-        h2 {
-            color: #ff6347;
-        }
-        .service {
-            margin-bottom: 10px;
-        }
-        .circular-image {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            display: block;
-            margin: 0 auto;
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 -4px 8px rgba(0,0,0,0.1);
-        }
-        .carousel-image {
-            display: none;
-            width: 100%;
-        }
-        .carousel-image:first-child {
-            display: block;
-        }
-        .carousel-button {
-            cursor: pointer;
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
-            border: none;
-            padding: 10px;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-        .prev {
-            left: 10px;
-        }
-        .next {
-            right: 10px;
-        }
-    </style>
-    <script>
-        function toggleService(serviceId) {
-            const service = document.getElementById(serviceId);
-            service.style.display = service.style.display === 'none' ? 'block' : 'none';
-        }
-    </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dream Lane Wedding Events</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      margin: 0;
+    }
+
+    header {
+      background-color: #fff;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      margin: 0;
+      color: #ff6347;
+    }
+
+    header p {
+      margin: 0;
+      font-size: 1.2em;
+    }
+
+    button {
+      background-color: #ff6347;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+
+    section {
+      padding: 20px;
+      background-color: #fff;
+      margin: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    h2, h3, h4, h5 {
+      color: #ff6347;
+    }
+
+    .service {
+      margin-bottom: 10px;
+    }
+
+    .circular-image {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      display: block;
+      margin: 0 auto;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .carousel-image {
+      display: none;
+      width: 100%;
+    }
+
+    .carousel-image:first-child {
+      display: block;
+    }
+
+    .carousel-button {
+      cursor: pointer;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      padding: 10px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .prev {
+      left: 10px;
+    }
+
+    .next {
+      right: 10px;
+    }
+
+    .icon {
+      font-size: 1.5em;
+      margin-right: 10px;
+    }
+
+    .wedding-details {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .wedding-details img {
+      width: 30%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .wedding-details p {
+      width: 100%;
+    }
+  </style>
+  <script>
+    function toggleService(serviceId) {
+      const service = document.getElementById(serviceId);
+      service.style.display = service.style.display === 'none' ? 'block' : 'none';
+    }
+
+    function prevImage() {
+      const images = document.querySelectorAll('.carousel-image');
+      const current = Array.from(images).findIndex(img => img.style.display === 'block');
+      images[current].style.display = 'none';
+      const prev = (current - 1 + images.length) % images.length;
+      images[prev].style.display = 'block';
+    }
+
+    function nextImage() {
+      const images = document.querySelectorAll('.carousel-image');
+      const current = Array.from(images).findIndex(img => img.style.display === 'block');
+      images[current].style.display = 'none';
+      const next = (current + 1) % images.length;
+      images[next].style.display = 'block';
+    }
+  </script>
 </head>
 <body>
-    <header>
-        <h1>Dream Lane Wedding Events</h1>
-        <p>Making your dream wedding come true</p>
-        <button onclick="getQuote()">Get a Quote</button>
-    </header>
+  <header>
+    <h1>Dream Lane Wedding Events</h1>
+    <p>Making your dream wedding come true</p>
+    <button onclick="getQuote()">Get a Quote</button>
+  </header>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>Welcome to Dream Lane! We provide exceptional wedding event planning services to make your special day unforgettable.</p>
+  </section>
+
+  <section id="services">
+    <h2>Our Services</h2>
     
-    <section id="about">
-        <h2>About Us</h2>
-        <p>Welcome to Dream Lane! We provide exceptional wedding event planning services to make your special day unforgettable.</p>
-    </section>
-    
-    <section id="services">
-        <h2>Our Services</h2>
-        <div class="service">
-            <h3 onclick="toggleService('planningCoordination')">Planning & Coordination</h3>
-            <div id="planningCoordination" style="display:none;">
-                <div class="service" onclick="toggleService('muslimWedding')">
-                    <h4>Muslim Wedding</h4>
-                    <div id="muslimWedding" style="display:none;">
-                        <div class="service">
-                            <h5>Mehedi Ceremony</h5>
-                            <p>Details about the Mehedi Ceremony for Muslim weddings.</p>
-                        </div>
-                        <div class="service">
-                            <h5>Holud Sondha</h5>
-                            <p>Details about the Holud Sondha for Muslim weddings.</p>
-                        </div>
-                        <div class="service">
-                            <h5>Wedding</h5>
-                            <p>Details about the wedding ceremony for Muslim weddings.</p>
-                            <!-- Photo catalog for Muslim Wedding -->
-                        </div>
-                    </div>
-                </div>
-                <div class="service" onclick="toggleService('hinduWedding')">
-                    <h4>Hindu Wedding</h4>
-                    <div id="hinduWedding" style="display:none;">
-                        <div class="service">
-                            <h5>Mehedi Ceremony</h5>
-                            <p>Details about the Mehedi Ceremony for Hindu weddings.</p>
-                        </div>
-                        <div class="service">
-                            <h5>Holud Sondha</h5>
-                            <p>Details about the Holud Sondha for Hindu weddings.</p>
-                        </div>
-                        <div class="service">
-                            <h5>Wedding</h5>
-                            <p>Details about the wedding ceremony for Hindu weddings.</p>
-                            <!-- Photo catalog for Hindu Wedding -->
-                        </div>
-                    </div>
-                </div>
-                <div class="service" onclick="toggleService('christianWedding')">
-                    <h4>Christian Wedding</h4>
-                    <div id="christianWedding" style="display:none;">
-                        <div class="service">
-                            <h5>Mehedi Ceremony</h5>
-                            <p>Details about the Mehedi Ceremony for Christian weddings.</p>
-                        </div>
-                        <div class="service">
-                            <h5>Holud Sondha</h5>
-                            <p>Details about the Holud Sondha for Christian weddings.</p>
-                        </div>
-                        <div class="service">
-                            <h5>Wedding</h5>
-                            <p>Details about the wedding ceremony for Christian weddings.</p>
-                            <!-- Photo catalog for Christian Wedding -->
-                        </div>
-                    </div>
-                </div>
+    <!-- Wedding Services with Icons -->
+    <div class="service">
+      <h3 onclick="toggleService('planningCoordination')"><i class="fas fa-calendar-check icon"></i> Planning & Coordination</h3>
+      <div id="planningCoordination" style="display:none;">
+        <div class="service" onclick="toggleService('muslimWedding')">
+          <h4>Muslim Wedding</h4>
+          <div id="muslimWedding" style="display:none;">
+            <div class="wedding-details">
+              <img src="mehedi.jpg" alt="Mehedi Ceremony">
+              <img src="holud-sondha.jpg" alt="Holud Sondha">
+              <img src="wedding.jpg" alt="Wedding Ceremony">
             </div>
+            <div class="service">
+              <h5>Mehedi Ceremony</h5>
+              <p>Details about the Mehedi Ceremony for Muslim weddings.</p>
+            </div>
+            <div class="service">
+              <h5>Holud Sondha</h5>
+              <p>Details about the Holud Sondha for Muslim weddings.</p>
+            </div>
+            <div class="service">
+              <h5>Wedding</h5>
+              <p>Details about the wedding ceremony for Muslim weddings.</p>
+            </div>
+          </div>
         </div>
-        <div class="service">
-            <h3>Catering</h3>
-            <p>Information on catering options, including menus and special dietary accommodations.</p>
+
+        <!-- Hindu Wedding Example -->
+        <div class="service" onclick="toggleService('hinduWedding')">
+          <h4>Hindu Wedding</h4>
+          <div id="hinduWedding" style="display:none;">
+            <div class="wedding-details">
+              <img src="hindu-mehedi.jpg" alt="Hindu Mehedi">
+              <img src="hindu-holud.jpg" alt="Hindu Holud">
+              <img src="hindu-wedding.jpg" alt="Hindu Wedding">
+            </div>
+            <div class="service">
+              <h5>Mehedi Ceremony</h5>
+              <p>Details about the Mehedi Ceremony for Hindu weddings.</p>
+            </div>
+            <div class="service">
+              <h5>Holud Sondha</h5>
+              <p>Details about the Holud Sondha for Hindu weddings.</p>
+            </div>
+            <div class="service">
+              <h5>Wedding</h5>
+              <p>Details about the wedding ceremony for Hindu weddings.</p>
+            </div>
+          </div>
         </div>
-        <div class="service">
-            <h3>Photography & Videography</h3>
-            <p>Packages available, portfolio samples, and photographer bios.</p>
-        </div>
-        <div class="service">
-            <h3>Decor & Design</h3>
-            <p>Examples of decor themes and options.</p>
-        </div>
-        <div class="service">
-            <h3>Venue Options</h3>
-            <p>List of partnered venues or venue setup services.</p>
-        </div>
-        <div class="service">
-            <img src="imran.jpg" alt="MD Imran Hossain" class="circular-image">
-            <h3 style="text-align:center;">MD Imran Hossain</h3>
-            <p style="text-align:center;">Studied at Nargis Memorial Nursing College, Bagerhat</p>
-            <p style="text-align:center;">Phone: 01301459229</p>
-            <p style="text-align:center;">Gmail: ihimranhossain2003@gmail.com</p>
-        </div>
-    </section>
-    
-    <section id="testimonials">
-        <h2>Testimonials</h2>
-        <p>Hear from our happy couples!</p>
-        <!-- Add testimonials here -->
-    </section>
-    
-    <section id="gallery">
-        <h2>Gallery</h2>
-        <div id="image-carousel" class="carousel">
-            <img src="image1.jpg" alt="Wedding Photo 1" class="carousel-image">
-            <img src="image2.jpg" alt="Wedding Photo 2" class="carousel-image">
-            <img src="image3.jpg" alt="Wedding Photo 3" class="carousel-image">
-            <button class="carousel-button prev" onclick="prevImage()">&#10094;</button>
-            <button class="carousel-button next" onclick="nextImage()">&#10095;</button>
-        </div>
-    </section>
-    
-    <section id="pricing">
-        <h2>Pricing Packages</h2>
-        <p>Explore our transparent pricing packages.</p>
-        <!-- Add pricing details here -->
-    </section>
-    
-    <section id="blog">
-        <h2>Blog/Resources</h2>
-        <p>Helpful articles and tips for planning a wedding.</p>
-        <!-- Add blog links here -->
-    </section>
-    
-    <footer>
-        <p>&copy; 2025 Dream Lane Wedding Events</p>
-    </footer>
+      </div>
+    </div>
+
+    <!-- Other Services -->
+    <div class="service">
+      <h3><i class="fas fa-utensils icon"></i> Catering</h3>
+      <p>Information on catering options, including menus and special dietary accommodations.</p>
+    </div>
+    <div class="service">
+      <h3><i class="fas fa-camera icon"></i> Photography & Videography</h3>
+      <p>Packages available, portfolio samples, and photographer bios.</p>
+    </div>
+    <div class="service">
+      <h3><i class="fas fa-paint-brush icon"></i> Decor & Design</h3>
+      <p>Examples of decor themes and options.</p>
+    </div>
+    <div class="service">
+      <h3><i class="fas fa-building icon"></i> Venue Options</h3>
+      <p>List of partnered venues or venue setup services.</p>
+    </div>
+    <div class="service">
+      <img src="imran.jpg" alt="MD Imran Hossain" class="circular-image">
+      <h3>MD Imran Hossain</h3>
+      <p>Studied at Nargis Memorial Nursing College, Bagerhat</p>
+      <p>Phone: 01301459229</p>
+      <p>Gmail: ihimranhossain2003@gmail.com</p>
+    </div>
+  </section>
+
+  <section id="testimonials">
+    <h2>Testimonials</h2>
+    <p>Hear from our happy couples!</p>
+  </section>
+
+  <section id="gallery">
+    <h2>Gallery</h2>
+    <div id="image-carousel" class="carousel">
+      <img src="image1.jpg" alt="Wedding Photo 1" class="carousel-image">
+      <img src="image2.jpg" alt="Wedding Photo 2" class="carousel-image">
+      <img src="image3.jpg" alt="Wedding Photo 3" class="carousel-image">
+      <button class="carousel-button prev" onclick="prevImage()">&#10094;</button>
+      <button class="carousel-button next" onclick="nextImage()">&#10095;</button>
+    </div>
+  </section>
+
+  <section id="pricing">
+    <h2>Pricing Packages</h2>
+    <p>Explore our transparent pricing packages.</p>
+  </section>
+
+  <section id="blog">
+    <h2>Blog/Resources</h2>
+    <p>Helpful articles and tips for planning a wedding.</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Dream Lane Wedding Events</p>
+  </footer>
 </body>
 </html>
+
