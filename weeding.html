@@ -1,5 +1,4 @@
 
-You said:
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -198,41 +197,70 @@ You said:
     <button onclick="toggleWeddingType('muslim-wedding')">Muslim Wedding</button>
     <button onclick="toggleWeddingType('hindu-wedding')">Hindu Wedding</button>
     <button onclick="toggleWeddingType('christian-wedding')">Christian Wedding</button>
-  </section>
+</section>
 
-  <section id="muslim-wedding" class="wedding-types">
+<section id="muslim-wedding" class="wedding-types" style="display: none;">
     <h3>Muslim Wedding</h3>
     <button onclick="toggleCeremony('mehndi-muslim')">Mehndi Ceremony</button>
     <button onclick="toggleCeremony('holud-muslim')">Holud Shonda</button>
     <button onclick="toggleCeremony('wedding-muslim')">Wedding Arrangement</button>
-  </section>
+</section>
 
-  <section id="mehndi-muslim" class="ceremony">
+<section id="hindu-wedding" class="wedding-types" style="display: none;">
+    <h3>Hindu Wedding</h3>
+    <!-- Add specific ceremony options and details here -->
+</section>
+
+<section id="christian-wedding" class="wedding-types" style="display: none;">
+    <h3>Christian Wedding</h3>
+    <!-- Add specific ceremony options and details here -->
+</section>
+
+<section id="mehndi-muslim" class="ceremony" style="display: none;">
     <h4>Mehndi Ceremony</h4>
     <div class="image-gallery">
-      <img src="mehndi1.jpg" alt="Mehndi Image 1">
-      <img src="mehndi2.jpg" alt="Mehndi Image 2">
+        <img src="mehndi1.jpg" alt="Mehndi Image 1">
+        <img src="mehndi2.jpg" alt="Mehndi Image 2">
     </div>
     <p>Price: $500 - $1500</p>
-  </section>
+</section>
 
-  <section id="holud-muslim" class="ceremony">
+<section id="holud-muslim" class="ceremony" style="display: none;">
     <h4>Holud Shonda</h4>
     <div class="image-gallery">
-      <img src="holud1.jpg" alt="Holud Image 1">
-      <img src="holud2.jpg" alt="Holud Image 2">
+        <img src="holud1.jpg" alt="Holud Image 1">
+        <img src="holud2.jpg" alt="Holud Image 2">
     </div>
     <p>Price: $700 - $2000</p>
-  </section>
+</section>
 
-  <section id="wedding-muslim" class="ceremony">
+<section id="wedding-muslim" class="ceremony" style="display: none;">
     <h4>Wedding Arrangement</h4>
     <div class="image-gallery">
-      <img src="wedding1.jpg" alt="Wedding Image 1">
-      <img src="wedding2.jpg" alt="Wedding Image 2">
+        <img src="wedding1.jpg" alt="Wedding Image 1">
+        <img src="wedding2.jpg" alt="Wedding Image 2">
     </div>
     <p>Price: $2000 - $5000</p>
-  </section>
+</section>
+
+<script>
+function toggleWeddingType(type) {
+    var weddingTypes = document.querySelectorAll('.wedding-types');
+    weddingTypes.forEach(function(section) {
+        section.style.display = 'none';
+    });
+    document.getElementById(type).style.display = 'block';
+}
+
+function toggleCeremony(ceremony) {
+    var ceremonies = document.querySelectorAll('.ceremony');
+    ceremonies.forEach(function(section) {
+        section.style.display = 'none';
+    });
+    document.getElementById(ceremony).style.display = 'block';
+}
+</script>
+
 
     <!-- Catering Service -->
     <div class="service">
